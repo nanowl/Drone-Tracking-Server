@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title> <!--title 변수를 문서에 포함-->
+</head>
+<body>
+  <h1><%= title %></h1> <!--title 변수를 문서에 포함-->
+    <% for(var i = 0; i < max; i++) { %> <!--for문으로 반복 렌더링-->
+        <!--여기에 반복해서 렌더링 할 내용 입력-->
+        <p>Hello World <%= i %>트</p>
+    <% } %>
+    <% if(max % 2 == 0) { %>             <!--if문으로 조건부 렌더링-->
+        <!--아래 내용은 if문의 조건이 충족할때만 출력된다.-->
+        <p>max는 짝수입니다.</p>
+    <% } else { %>
+        <!--아래 내용은 if문의 조건이 충족할때만 출력된다.-->
+        <p>max는 홀수입니다.</p>
+    <% } %>
+</body>
+</html>
