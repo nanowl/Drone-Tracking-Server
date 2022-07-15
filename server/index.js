@@ -19,12 +19,6 @@ app.set('view engine', 'ejs');          // 템플릿 엔진을 ejs로 설정
 app.use('/', mainRouter);   // / 경로에 router.js 파일의 라우트들을 할당
 
 
-
-connection.query('select * from users', (error, rows, fields) => {
-  if (error) throw error;
-  console.log('User info is: ', rows);
-});
-
 app.listen(3000, () => {            // 3000번 포트로 요청 수신
   console.log('Server started at http://localhost:3000');
 });
