@@ -11,8 +11,6 @@ app.use(morgan('common'));
 app.use(bodyparser.urlencoded({ extended: false }));    // 쿼리 스트링 형식 바디 파싱
 app.use(bodyparser.json()); // json 형식 바디 파싱
 
-app.set('data', []);    // Express 객체인 app에 set 메소드로 전역 변수를 선언할 수 있다.
-
 app.set('views', __dirname + '/views'); // views 폴더에서 ejs 템플릿을 가져오게 설정
 app.set('view engine', 'ejs');          // 템플릿 엔진을 ejs로 설정
 
